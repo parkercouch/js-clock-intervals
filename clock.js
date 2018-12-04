@@ -4,10 +4,10 @@ const minuteHand = document.getElementById('minute');
 const secondHand = document.getElementById('second');
 
 document.addEventListener('DOMContentLoaded', () => {
-    startClock();
+    tickTock();
 });
 
-function startClock () {
+function tickTock () {
     const currentTime = new Date();
     const hour = currentTime.getHours();
     const minute = currentTime.getMinutes();
@@ -16,7 +16,7 @@ function startClock () {
     setHand(hourHand, hourRotation(hour, minute));
     setHand(minuteHand, minuteRotation(minute, second));
     setHand(secondHand, secondRotation(second));
-    const t = setTimeout(startClock, 1000);
+    const t = setTimeout(tickTock, 1000);
 }
 
 //----------------------------------------------------/ 
@@ -40,5 +40,6 @@ const minuteRotation = function (minute, second) {
 
 // secondRotation :: INT -> INT
 const secondRotation = function (second) {
+
     return second * 6;
 }; 

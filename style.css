@@ -24,17 +24,17 @@ body {
 
 #hour {
     z-index: 1;
-    transform: rotate(30deg);
+
 }
 
 #minute {
     z-index: 2;
-    transform: rotate(120deg);
 }
 
 #second {
     z-index: 3;
-    transform: rotate(6deg);
+    transition: all 500ms cubic-bezier(0.875, -0.395, 0.870, 1.525);
+    transition-timing-function: cubic-bezier(0.875, -0.395, 0.870, 1.525);
 }
 
 .container {
