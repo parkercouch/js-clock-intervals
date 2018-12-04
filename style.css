@@ -1,14 +1,46 @@
+body {
+    background-color: white;
+}
+
 #clock {
+    position: relative;
+    width: 750px;
+    height: 750px;
 }
 
 #clock img {
+    position: absolute;
+    top: 75px;
+    left: 75px;
+}
+
+#face {
+    z-index: 0;
+    margin: -50px;
+    padding: 0px;
+    border: 50px solid black;
+    border-radius: 500px;
 }
 
 #hour {
+    z-index: 1;
+    transform: rotate(30deg);
 }
 
 #minute {
+    z-index: 2;
+    transform: rotate(120deg);
 }
 
 #second {
+    z-index: 3;
+    transform: rotate(6deg);
+}
+
+.container {
+    max-width: 750px;
+    margin: 50px auto;
+    background-color: lightgrey;
+    border: 5px solid black;
+    border-radius: 50px;
 }
