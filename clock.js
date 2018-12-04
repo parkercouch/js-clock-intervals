@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     tickTock();
 });
 
+// tickTock :: () -> VOID
 function tickTock () {
     const currentTime = new Date();
     const hour = currentTime.getHours();
@@ -28,12 +29,12 @@ const setHand = function (hand, degrees) {
     hand.style.transform = "rotate(" + degrees + "deg)";
 };
 
-// hourRotation :: INT -> INT -> INT
+// hourRotation :: INT -> INT -> FLOAT
 const hourRotation = function (hour, min) {
     return (hour * 30) + (.5 * min);
 }; 
 
-// minuteRotation :: INT -> INT -> INT
+// minuteRotation :: INT -> INT -> FLOAT
 const minuteRotation = function (minute, second) {
     return (minute * 6) + (0.1 * second);
 }; 
